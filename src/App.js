@@ -117,9 +117,9 @@ function App() {
     const { offsetWidth, offsetHeight } = event.target;
     const xPosition = Math.round((clientX / offsetWidth) * 10000)/100;
     const yPosition = Math.round((clientY / offsetHeight) * 10000)/100;
-    console.log({ xPosition, yPosition })
+    
 
-    let matchedPosition = Positions.forEach((position, index) => {
+    Positions.forEach((position, index) => {
       const xDiff = Math.abs(position.xPosition - xPosition);
       const yDiff = Math.abs(position.yPosition - yPosition);
 
